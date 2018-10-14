@@ -18,7 +18,7 @@ def mix():
         fakestone = "{}{}".format(test[0:2], int(test[2:]) + 1)
     stones = random.sample(stone, len(stone))
     startergamer = random.choice([0,1,2,3])
-    print "oyunu", "{}.oyuncu baslatiyor".format(startergamer)
+    print "oyunu", "{}.oyuncu baslatiyor".format(startergamer+1)
     for deal, gamer in zip([0,15,30,45], ("gamer1", "gamer2", "gamer3", "gamer4")):
         if deal is [0,15,30,45][startergamer]: #oyunu başlatan oyuncu 
             total = 15 #taş sayısı
