@@ -29,9 +29,11 @@ def mix():
             "fakestone":fakestone,
             "stones": stones}
 table = mix()
+print table
+print "*"*50
 print "gamer1", gamers.get("gamer1")
 print "gamer2",gamers.get("gamer2")
 print "gamer3",gamers.get("gamer3")
 print "gamer4",gamers.get("gamer4")
-print "*"*50
-print table
+
+
