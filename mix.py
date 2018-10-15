@@ -1,3 +1,4 @@
+#http://www.favorite-games.com/htmlen/rules_okey.php
 import random
 gamers = dict()
 gamersList = ("gamer1", "gamer2", "gamer3", "gamer4")
@@ -39,3 +40,4 @@ print "gamer2",gamers.get("gamer2")
 print "gamer3",gamers.get("gamer3")
 print "gamer4",gamers.get("gamer4")
 print len(table["stones"])
+
