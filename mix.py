@@ -1,4 +1,5 @@
-#http://www.favorite-games.com/htmlen/rules_okey.php
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 import random
 gamers = dict()
 gamersList = ("gamer1", "gamer2", "gamer3", "gamer4")
@@ -11,6 +12,7 @@ stone = ["SI1", "SI2", "SI3", "SI4", "SI5", "SI6", "SI7", "SI8", "SI9", "SI10", 
          "KI1", "KI2", "KI3", "KI4", "KI5", "KI6", "KI7", "KI8", "KI9", "KI10", "KI11", "KI12", "KI13",
          "SA1", "SA2", "SA3", "SA4", "SA5", "SA6", "SA7", "SA8", "SA9", "SA10", "SA11", "SA12", "SA13",
          "SAH", "SAH"]
+
 def mix():
     test = random.choice(stone[0:-2])
     joker = test
@@ -21,7 +23,7 @@ def mix():
         fakestone = test
     stones = random.sample(stone, len(stone))
     startergamer = random.choice(gamersList) #oyunu başlatan oyuncu
-    print "oyunu", "{} baslatiyor".format(startergamer)
+    print "oyunu", "{} başlatiyor".format(startergamer)
     for gamer in gamersList:
         if startergamer is gamer: 
             total = 15 #taş sayısı
@@ -29,15 +31,18 @@ def mix():
             total = 14
         gamers[gamer] = stones[0:total]
         del stones[0:total]
-    return {"joker":joker, 
+    return {"select":joker, 
             "fakestone":fakestone,
-            "stones": stones}
+            "stones":stones,
+            "joker":fakestone}
+            
 table = mix()
 print table
-print "*"*70
-print "gamer1",gamers.get("gamer1")
-print "gamer2",gamers.get("gamer2")
-print "gamer3",gamers.get("gamer3")
-print "gamer4",gamers.get("gamer4")
-print len(table["stones"])
+
+#print "*"*70
+#print "gamer1",gamers.get("gamer1")
+#print "gamer2",gamers.get("gamer2")
+#print "gamer3",gamers.get("gamer3")
+#print "gamer4",gamers.get("gamer4")
+#print len(table["stones"])
 
